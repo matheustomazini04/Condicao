@@ -49,8 +49,8 @@
 
             #region Operador Ternário
 
-            int numero = 10;
-            string mensagem = "";
+            //int numero = 10;
+            //string mensagem = "";
 
             //if (numero > 5)
             //{
@@ -64,18 +64,48 @@
             // condição ? true : false;
 
             //mensagem = numero > 5 ? "maior que 5" : "menor que 5";
-               
+
             //Console.WriteLine(mensagem);
             //Console.ReadKey();
 
             // pode ser feita a operação ternaria no print
 
-            Console.WriteLine(numero > 5 ? "maior que 5" : "menor que 5");
-            Console.ReadKey();
+            //Console.WriteLine(numero > 5 ? "maior que 5" : "menor que 5");
+            //Console.ReadKey();
 
 
             #endregion
 
+            #region IMC
+            double peso, altura, imc;
+
+            Console.Write("Digite seu peso (kg): ");
+            peso = Convert.ToDouble(Console.ReadLine());
+            
+            Console.Write("Digite sua altura (m): ");
+            altura = Convert.ToDouble(Console.ReadLine());
+
+            imc = peso / (altura * altura);
+
+            if (imc < 20)
+            {
+                Console.WriteLine("\n IMC = " + imc + " -> Abaixo do peso");
+            }
+            else if ( imc >= 20 && imc <=24)
+            {
+                Console.WriteLine("\n IMC = " + imc + " -> Peso normal");
+            }
+            else if (imc >= 25 && imc <= 29)
+            {
+                Console.WriteLine("\n IMC = " + imc + " -> Acima do peso");
+            }
+            else if (imc >= 30 && imc <= 34)
+            {
+                Console.WriteLine("\n IMC = " + imc + " -> Muito acima do peso");
+            }
+
+
+            #endregion
         }
     }
 }
